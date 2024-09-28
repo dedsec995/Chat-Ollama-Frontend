@@ -1,0 +1,20 @@
+.chat-box {
+    height: 500px;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #03656b;
+    border-bottom: 2px solid #ddd;
+    color: white;
+}
+
+.user-message {
+    text-align: right;
+    color: white;
+    margin: 10px 0;
+}
+
+.bot-response {
+    text-align: left;
+    color: white;
+    margin: 10px 0;
+}

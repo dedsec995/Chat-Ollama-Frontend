@@ -1,0 +1,37 @@
+.sidebar {
+    width: 200px;
+    padding: 20px;
+    background-color: #011f21;
+    color: white;
+    border-right: 2px solid #ddd;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.sidebar ul li:hover {
+    background-color: #666; /* Darker grey on hover */
+}
+
+#new-convo-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: white;
+    color: #007bff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
