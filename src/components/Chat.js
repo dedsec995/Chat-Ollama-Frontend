@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+// src/components/Chat.js
+
+import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import './Chat.css';
 import Sidebar from './Sidebar/Sidebar';
@@ -62,6 +64,24 @@ const Chat = () => {
         setUserMessage('');
     };
 
+    const handleFileUpload = async (file) => {
+        const formData = new FormData();
+        formData.append('file', file);
+        formData.append('conversation_id', currentConversationId || ''); // Ensure you send the conversation ID
+
+        try {
+            await axios.post('http://localhost:5000/upload', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            });
+            // Optionally, you can fetch the messages again to refresh the view
+            fetchConversation(currentConversationId);
+        } catch (error) {
+            console.error("Error uploading file:", error);
+        }
+    };
+
     const handleNewConversation = () => {
         setCurrentConversationId(null);
         setMessages([]);
@@ -81,6 +101,8 @@ const Chat = () => {
                     setUserMessage={setUserMessage} 
                     handleSendMessage={handleSendMessage} 
                     loading={loading} 
+                    handleFileUpload={handleFileUpload} // Pass the upload function
+                    conversationId={currentConversationId}
                 />
             </div>
         </div>

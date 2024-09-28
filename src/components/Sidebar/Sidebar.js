@@ -1,3 +1,5 @@
+// src/components/Sidebar/Sidebar.js
+
 import React from 'react';
 import './Sidebar.css';
 const Sidebar = ({ conversations, fetchConversation, handleNewConversation }) => {

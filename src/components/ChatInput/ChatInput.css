@@ -1,9 +1,11 @@
+/* src/components/ChatInput/ChatInput.css */
+
 .input-container {
     display: flex;
     padding: 20px;
     background-color: #fff;
     border-top: 2px solid #ddd;
-    background-color: #007bff;
+    background-color: #007bff80;
 }
 
 input[type="text"] {
@@ -28,6 +30,20 @@ button {
 button:hover {
     background-color: #4caf50; /* Darker lime green on hover */
 }
+
+.upload-btn {
+    margin: 0 10px; /* Space around the button */
+    background: transparent; /* Make background transparent */
+    border: none; /* Remove border */
+    cursor: pointer; /* Change cursor to pointer */
+    color: white; /* Change icon color to white or any desired color */
+    font-size: 20px; /* Increase font size for better visibility */
+}
+
+.upload-btn i {
+    vertical-align: middle; /* Align icon vertically in the middle */
+}
+
 
 .loading-spinner {
     width: 40px; /* Width of the spinner */
