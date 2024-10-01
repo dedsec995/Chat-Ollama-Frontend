@@ -1,21 +1,10 @@
-/* src/components/Chat.css */
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #1c1c1c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
 .container {
     display: flex;
-    width: 800px;
+    width: 100vw; /* Change from 800px to 100% */
+    height: 100vh; /* Full height of the viewport */
     background-color: #000000;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0; /* Remove border radius for full width */
+    box-shadow: none; /* Remove shadow if desired */
 }
 
 .chat-container {
@@ -23,3 +12,4 @@ body {
     display: flex;
     flex-direction: column;
 }
+

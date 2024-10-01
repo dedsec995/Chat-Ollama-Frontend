@@ -1,4 +1,4 @@
-/* src/components/Sidebar/Sidebar.css */
+/* Sidebar.css */
 
 .sidebar {
     width: 200px;
@@ -6,15 +6,31 @@
     background-color: #011f21;
     color: white;
     border-right: 2px solid #ddd;
+    transition: width 0.3s;
 }
 
 .sidebar h3 {
     margin-top: 0;
+    cursor: pointer;
 }
 
-.sidebar ul {
+.conversation-list {
     list-style-type: none;
     padding: 0;
+    max-height: 500px; /* Set a max height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.conversation-list.hidden {
+    display: none; /* Hide the list when collapsed */
+}
+
+.sidebar.collapsed {
+    width: 50px; /* Change width when collapsed */
+}
+
+.sidebar.collapsed h3 {
+    text-align: center; /* Center text when collapsed */
 }
 
 .sidebar ul li {
@@ -26,7 +42,7 @@
     background-color: #666; /* Darker grey on hover */
 }
 
-#new-convo-btn {
+.new-convo-btn {
     margin-top: 20px;
     width: 100%;
     padding: 10px;
@@ -36,4 +52,15 @@
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.new-convo-btn.collapsed {
+    text-align: center; /* Center the button text when collapsed */
+    padding: 0; /* Adjust padding */
+    height: 50px; /* Ensure the button has a consistent height */
+}
+
+.new-convo-btn:hover {
+    background-color: #f0f0f0; /* Light grey on hover */
 }
